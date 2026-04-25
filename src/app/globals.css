@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* 1. Force full width for the wrapper */
+.iti {
+  width: 100% !important;
+  display: block !important;
+}
+
+/* 2. Style the flag container as a distinct, separated left box */
+.iti__flag-container {
+  border-right: 2px solid #e2e8f0 !important;
+  background-color: #f8fafc !important;
+  border-radius: 12px 0 0 12px !important;
+  padding-right: 8px !important;
+  z-index: 10 !important;
+}
+
+/* Ensure dropdown matches styling */
+.iti__country-list {
+  border-radius: 12px !important;
+  border: 2px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.iti__search-input {
+  display: none !important;
+}
+
+/* intl-tel-input: match form field (56px, 14px radius, 2px border) */
+.input-group .iti {
+  width: 100% !important;
+  height: 56px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #fcfdfe !important;
+}
+.input-group .iti:focus-within {
+  border-color: #0056b3 !important;
+}
+.custom-phone-container-error .iti {
+  border-color: #ef4444 !important;
+}
+.input-group .iti .iti__tel-input {
+  height: 100% !important;
+  padding-right: 1rem !important;
+  font-size: 16px !important;
+  border: none !important;
+  background: transparent !important;
+}
+.input-group .iti .iti__country-container {
+  border-right: 2px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease;
+}
+.animate-fade-in-slow {
+  animation: fadeIn 0.5s ease;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

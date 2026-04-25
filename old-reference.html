@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Work For All - Анкета</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1327263869105546'); 
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1327263869105546&ev=PageView&noscript=1"
+  /></noscript>
+  <style>
+    :root { --main: #0056b3; --error: #ef4444; --bg: #f8fafc; --text: #1e293b; --success: #10b981; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 10px; color: var(--text); box-sizing: border-box; }
+    #container { background: white; width: 100%; max-width: 460px; border-radius: 28px; box-shadow: 0 15px 40px rgba(0,86,179,0.1); overflow: hidden; position: relative; }
+    .header { padding: 30px 20px 15px; text-align: center; }
+    .logo { width: 180px; margin-bottom: 20px; }
+    h1 { font-size: 20px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+    .sub { font-size: 14px; color: #64748b; line-height: 1.5; }
+    .progress-wrap { height: 6px; background: #e2e8f0; width: 100%; }
+    #bar { height: 100%; background: var(--main); width: 0%; transition: 0.5s ease; }
+    .content { padding: 25px; min-height: 400px; display: flex; flex-direction: column; }
+    .input-group { margin-bottom: 18px; text-align: left; }
+    label { font-size: 13px; font-weight: 700; color: #475569; display: block; margin-bottom: 8px; }
+    input { width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 14px; font-size: 16px; box-sizing: border-box; transition: 0.3s; background: #fcfdfe; }
+    input:focus { border-color: var(--main); outline: none; }
+    .iti { width: 100%; }
+    input.invalid { border-color: var(--error); background: #fffafb; }
+    .opt-card { border: 2px solid #e2e8f0; padding: 16px; border-radius: 16px; margin-bottom: 10px; cursor: pointer; transition: 0.2s; font-weight: 600; font-size: 15px; background: white; }
+    .opt-card:hover { border-color: var(--main); background: #f0f7ff; transform: translateY(-2px); }
+    .btn-submit { background: var(--main); color: white; border: none; padding: 18px; border-radius: 16px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; margin-top: auto; transition: 0.3s; }
+    
+    .consent-box { display: flex; align-items: flex-start; margin-bottom: 20px; gap: 10px; }
+    .consent-box input { width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0; cursor: pointer; }
+    .consent-box label { font-size: 12px; font-weight: 400; color: #64748b; line-height: 1.4; margin: 0; cursor: pointer; }
+    .consent-box a { color: var(--main); text-decoration: underline; }
+
+    .success-modal { text-align: center; padding: 20px 10px; animation: fadeIn 0.5s ease; }
+    .check-icon { width: 80px; height: 80px; background: #e6f7ef; color: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; margin: 0 auto 20px; box-shadow: 0 10px 20px rgba(16,185,129,0.2); }
+    .m-title { font-size: 24px; font-weight: 700; margin-bottom: 15px; }
+    .m-text { color: #64748b; font-size: 15px; margin-bottom: 30px; line-height: 1.5; }
+    .msg-group { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+    .msg-btn { padding: 12px 15px; border-radius: 12px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: 0.2s; min-width: 110px; justify-content: center; }
+    .wa { background: #25D366; } .tg { background: #0088cc; } .vb { background: #7360f2; }
+    .msg-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-close { background: #f1f5f9; color: #475569; border: none; padding: 15px; border-radius: 12px; width: 100%; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .btn-close:hover { background: #e2e8f0; }
+
+    #loader { display: none; text-align: center; padding: 60px 20px; }
+    .spin { border: 4px solid #f3f3f3; border-top: 4px solid var(--main); border-radius: 50%; width: 45px; height: 45px; animation: rotate 1s linear infinite; margin: 0 auto 20px; }
+    @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .step { display: none; flex-direction: column; height: 100%; animation: fadeIn 0.4s ease; }
+    .step.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div class="header" id="f-header">
+    <img src="https://i.ibb.co/PvRd3TkP/logo-blue.png" alt="Work For All" class="logo">
+    <h1>Анкета для запису на консультацію — Work For All</h1>
+    <p class="sub">Будь ласка, заповніть дані. Це займе близько 1 хвилини.</p>
+  </div>
+  <div class="progress-wrap" id="p-wrap"><div id="bar"></div></div>
+  
+  <div class="content">
+    <form id="main-form">
+      <div class="step active" id="s0">
+        <div class="input-group"><label>Прізвище та ім'я</label><input type="text" id="name" autocomplete="name" placeholder="Олександр Іванов"></div>
+        <div class="input-group"><label>Номер телефону</label><input type="tel" id="phone" autocomplete="tel"></div>
+        <div class="input-group"><label>Місто проживання</label><input type="text" id="city" autocomplete="address-level2" placeholder="Братислава"></div>
+        <div class="input-group"><label>Email (Опціонально)</label><input type="email" id="email" autocomplete="email" placeholder="mail@example.com"></div>
+        
+        <div class="consent-box">
+          <input type="checkbox" id="consent">
+          <label for="consent">Я погоджуюся з <a href="https://script.google.com/macros/s/AKfycbyUEyXxC1ke9Awx3e_exdXGfkpBjrUqGVZjaqhLCTlJFxnVdtaEQrgCmKUiWs6r42ukZw/exec?page=privacy" target="_blank">Политикою конфіденційності</a> та даю згоду na spracovanie osobných údajov (GDPR).</label>
+        </div>
+
+        <div id="error-msg" style="color:var(--error); font-size:13px; margin-top:0; margin-bottom:15px; display:none; text-align:center;">Заповніть поля коректно</div>
+        <button type="button" class="btn-submit" onclick="next(1)">Продовжити</button>
+      </div>
+      <div id="dynamic-content"></div>
+    </form>
+
+    <div id="loader"><div class="spin"></div><h3>Обробка даних...</h3></div>
+
+    <div id="success" style="display:none;">
+      <div class="success-modal">
+        <div class="check-icon">✓</div>
+        <div class="m-title">Заявка прийнята!</div>
+        <div class="m-text">Дякуємо! Ваша заявка успішно надіслана. Натисніть на кнопку нижче, щоб написати нам у зручний месенджер.</div>
+        
+        <p style="font-size:12px; color:#94a3b8; font-weight:700; margin-bottom:15px; text-transform:uppercase;">Напишіть нам:</p>
+        <div class="msg-group">
+          <a href="https://wa.me/421951854505" class="msg-btn wa" target="_blank">WhatsApp</a>
+          <a href="https://t.me/Workforall_sk" class="msg-btn tg" target="_blank">Telegram</a>
+          <a href="viber://chat?number=421951854505" class="msg-btn vb" target="_blank">Viber</a>
+        </div>
+        
+        <button class="btn-close" onclick="window.top.location.href='https://www.workforall.sk/'">Зрозуміло</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ЭКСТРЕННЫЙ ПЕРЕХВАТЧИК ОШИБОК ДЛЯ iOS (Айфона)
+  window.onerror = function(message, source, lineno) {
+    alert("iOS Error: " + message + " на строке " + lineno);
+  };
+
+  const phoneInputField = document.querySelector("#phone");
+  const iti = window.intlTelInput(phoneInputField, {
+    preferredCountries: ["sk", "ua", "az"],
+    separateDialCode: true,
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+
+  const questions = [
+    { k: 'status', q: 'Ваш поточний статус?', o: ['У мене вже є тимчасовий захист (odídenec)', 'Тільки паспорт / біометричний документ', 'Карта ВНЖ іншої країни', 'ВНЖ Словаччини'] },
+    { k: 'address', q: 'Чи маєте ви офіційну адресу реєстрації у Словаччині?', o: ['Так, є', 'Ні', 'В процесі оформлення', 'Не знаю / потрібна консультація'] },
+    { k: 'work', q: 'Чи маєте ви офіційну роботу у Словаччині?', o: ['Так, офіційно працюю', 'В пошуку роботи', 'Наразі не працюю', 'Iнше'] },
+    { k: 'exp', q: 'Чи зверталися ви раніше щодо легалізації (ВНЖ)?', o: ['Так, звертався(лась)', 'Ні, звертаюся вперше', 'Частково консультувался(лась)', 'Звертався(лась), але процес зупинився'] },
+    { k: 'goal', q: 'З якою метою ви звертаєтеся?', o: ['Отримання ВНЖ', 'Продовження ВНЖ', 'Консультація щодо легалізації'] },
+    { k: 'channel', q: 'Як нам краще зв’язатися з вами?', o: ['Whatsapp', 'Viber', 'Telegram', 'Мобільний дзвінок'] }
+  ];
+
+  let formData = {};
+
+  function next(sIdx) {
+    if (sIdx === 1) {
+      const n = document.getElementById('name').value;
+      const c = document.getElementById('city').value;
+      const rawNum = phoneInputField.value.replace(/\D/g, ''); 
+      const fullNum = iti.getNumber().replace(/\D/g, ''); 
+      const consent = document.getElementById('consent').checked; 
+      
+      if (!n || !c || rawNum.length !== 9 || !consent) {
+        document.getElementById('error-msg').style.display='block';
+        if (!consent) {
+          document.getElementById('error-msg').innerText = "Будь ласка, підтвердіть згоду на обробку даних";
+        } else {
+          document.getElementById('error-msg').innerText = "Перевірте номер (має бути 9 цифр) та заповніть всі поля";
+        }
+        if (rawNum.length !== 9) phoneInputField.classList.add('invalid');
+        return;
+      }
+      formData = { name: n, phone: fullNum, city: c, email: document.getElementById('email').value };
+    }
+    document.getElementById('error-msg').style.display='none';
+    phoneInputField.classList.remove('invalid');
+    render(sIdx - 1);
+  }
+
+  function render(idx) {
+    if (idx >= questions.length) return submit();
+    const q = questions[idx];
+    let html = `<div class="step active"><h2>${q.q}</h2>`;
+    
+    // Генерируем карточки БЕЗ inline-кода (защита от блокировок браузера)
+    q.o.forEach((opt, i) => {
+      html += `<div class="opt-card" id="btn-opt-${i}">${opt}</div>`;
+    });
+    
+    document.getElementById('s0').style.display = 'none';
+    const dynContent = document.getElementById('dynamic-content');
+    dynContent.innerHTML = html + `</div>`;
+    document.getElementById('bar').style.width = ((idx + 1) / questions.length * 100) + '%';
+
+    // Железобетонно привязываем клики после создания кнопок
+    q.o.forEach((opt, i) => {
+      document.getElementById(`btn-opt-${i}`).addEventListener('click', function() {
+        formData[q.k] = opt;
+        render(idx + 1);
+      });
+    });
+  }
+
+  function submit() {
+    document.getElementById('main-form').style.display = 'none';
+    document.getElementById('p-wrap').style.display = 'none';
+    document.getElementById('f-header').style.display = 'none';
+    document.getElementById('loader').style.display = 'block';
+
+    // ТВОЯ НОВАЯ ССЫЛКА НА СКРИПТ (которую ты вставил после развертывания)
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyUEyXxC1ke9Awx3e_exdXGfkpBjrUqGVZjaqhLCTlJFxnVdtaEQrgCmKUiWs6r42ukZw/exec";
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify({ action: "processWebForm", data: formData })
+    })
+    .then(response => response.json()) // ВАЖНО: Читаем ответ от Гугл Таблицы
+    .then(result => {
+      // Отбиваем пиксель
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      
+      // ВОССТАНОВЛЕННАЯ ЛОГИКА: Проверяем, разрешен ли редирект
+      if (result.shouldRedirect && result.url) {
+         window.location.href = result.url; // Перекидываем на букинг
+      } else {
+         document.getElementById('loader').style.display = 'none'; 
+         document.getElementById('success').style.display = 'block'; // Показываем галочку
+      }
+    })
+    .catch(error => {
+      console.error('Ошибка:', error);
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      document.getElementById('loader').style.display = 'none'; 
+      document.getElementById('success').style.display = 'block';
+    });
+  }
+</script>
+</body>
+</html>
